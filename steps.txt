@@ -1,0 +1,86 @@
+to make components: 
+
+        class components:  < 16.8
+            1- Life Cycle Method --> function call in spfic time  (mounting, updating, unmouting)
+                constructor
+                render
+                componentDidMount  --> Call API
+                componentDidUpdate --> filteraion, search
+                componentWillUnmount --> delete localstorage, close timer 
+
+            2- state, setState --> Local data
+
+            3- props --> Shared Data between components
+
+
+        function components: hooks  are used for functions based components
+
+            1- life cycle method --> useEffect 
+
+                componentDidMount: 
+
+                componentDidUpdate
+                componentWillUnmount
+
+            2- state setState --> useState
+ __________________________________________________
+
+
+ 1- create component 
+ 2- create your form (bootstrap)
+ 3- for each input --> add 
+                value
+                onChange
+                name 
+4- define state - setState --> To Control Your Inputs 
+
+5- define onChange 
+
+6- get the value from event --> e.target.value
+
+7- Handle Validation:   
+    define state --> errors setErrors 
+8- set validation rule
+__________________________________________________ 
+
+1- Handle Routing == Navigation 
+
+    1- npm install react-router-dom@5
+    2- In App.js -->  import {BrowserRouter, Route , Switch} from 'react-router-dom' 
+    3- <BrowserRouter> 
+        <Switch> 
+            <Route exact path="/" component={HomePage} /> 
+        </Switch>
+    </BrowserRouter>
+         * it will render HomePage when the url is "/" and nothing after that
+    4- <Route exact path={"*"} component={NotFound} />
+    5- create component --> Navbar 
+    6- in Navbar --> use <Link>  instead of <a> to make navigation work without REFRESH 
+__________________________________________________
+
+
+1- State Managment: 
+    Redux: 
+        1- Action -->  type + payload 
+            export default changeTheme = (payload) => 
+            {
+                type: NAME_OF_ACTION,
+                payload
+
+            }
+
+        2- Reducer: 
+            check on the current state with the payload (new state)
+            return [...state, action.payload]
+
+
+        3- Store: 
+            hold Reducers
+
+    in App.js or index.js: 
+        <Provider store={Store}> 
+            <App> 
+        </Provider> 
+
+    
+
